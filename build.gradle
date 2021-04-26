@@ -6,6 +6,8 @@
  * User Manual available at https://docs.gradle.org/6.5/userguide/tutorial_java_projects.html
  */
 
+// sourceSets.main.java.srcDirs = ['src/main/java']
+
 plugins {
     // Apply the java plugin to add support for Java
     id 'java'
@@ -21,4 +23,12 @@ run {
 application {
     // Define the main class for the application.
     mainClassName = 'tictac.App'
+}
+
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'tictac.App'
+    )
+  }
 }

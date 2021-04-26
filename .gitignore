@@ -3,3 +3,12 @@
 
 # Ignore Gradle build output directory
 build
+.settings
+bin
+
+.idea/
+.vscode/
+
+*.zip
+
+.project
